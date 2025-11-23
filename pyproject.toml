@@ -1,0 +1,18 @@
+[tool.pixi.project]
+name = "hearb"
+version = "0.1.0"
+description = "An AI-powered interface that gives a voice to the silent world of your plants."
+authors = ["Jules <agent@morphic.dev>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tool.pixi.tasks]
+start = "python -m src.hearb.entrypoints.telegram_bot"
+
+[tool.pixi.dependencies]
+python = ">=3.11,<3.12"
+langchain = ">=0.2.5"
+langgraph = ">=0.0.66"
+pydantic = ">=2.7.4"
+pydantic-settings = ">=2.3.4"
+python-telegram-bot = ">=21.3"
